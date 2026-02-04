@@ -56,7 +56,7 @@ def test_interpolate():
     five = FieldElement(5, field)
     
     values = [five, two, two, one, five, zero]
-    domain = [FieldElement(i, field) for i in range(1, 6)]
+    domain = [FieldElement(i, field) for i in range(1, 7)]
 
     poly = Polynomial.interpolate_domain(domain, values)
 
