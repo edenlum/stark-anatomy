@@ -36,7 +36,7 @@ def test_trace( ):
             assert(False)
 
     # test transition constraints
-    omicron = rp.field.primitive_kth_root(1 << 119)
+    omicron = rp.field.primitive_nth_root(1 << 119)
     transition_constraints = rp.transition_constraints(omicron)
     first_step_constants, second_step_constants = rp.round_constants_polynomials(omicron)
     for o in range(len(trace)-1):
