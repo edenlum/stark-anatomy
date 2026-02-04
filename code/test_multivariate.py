@@ -34,7 +34,7 @@ def test_lift( ):
     five = FieldElement(5, field)
 
     upoly = Polynomial.interpolate_domain([zero, one, two], [two, five, five])
-    mpoly = MPolynomial.from_univariate(upoly, 3)
+    mpoly = MPolynomial.lift(upoly, 3)
 
     assert(upoly.evaluate(five) == mpoly.evaluate([zero, zero, zero, five])), "lifting univariate to multivariate failed"
 
